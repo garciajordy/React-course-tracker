@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import Registration from "./auth/Registration"
-const Home = (loggedInStatus) => {
-  
+import React from 'react';
+import Registration from "./auth/Registration";
+const Home = ({loggedInStatus}) => {
         return (
             <div>
                 <h1>Home</h1>
