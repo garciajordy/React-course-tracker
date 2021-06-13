@@ -22,6 +22,7 @@ function Registration() {
         },
         { withCredentials: true }
         ).then(response => {
+            console.log(response)
             if (response.data.status === "created") {
                 store.dispatch(logIn(response.data.user))
                 history.push("/dashboard")

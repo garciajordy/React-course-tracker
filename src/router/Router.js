@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import axios from "axios";
 import store from "../store/Store";
 import logOut from "../actions/LogoutAction";
+import Show from "../components/Show";
 
 function Router() {
     const loggingOut = () => {
@@ -27,6 +28,9 @@ function Router() {
                         <Home />
                     )} />
                     <Route exact path={"/dashboard"} component={Dashboard} />
+                    <Route exact path={"/course"} render={() => (
+                        <Show name={"TEST"} id={1} />
+                    )} />
                 </Switch>
             </BrowserRouter>
         </div>
