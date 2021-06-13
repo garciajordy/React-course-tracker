@@ -23,7 +23,7 @@ const Home = ({ loggedInStatus }) => {
       })
     }
         return (
-            <div>
+            <div className="dashboard">
                 <h1>Home</h1>
                 <h1>{ loggedInStatus }</h1>
                 <Registration />

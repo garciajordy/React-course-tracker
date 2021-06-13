@@ -7,6 +7,9 @@ import axios from "axios";
 import store from "../store/Store";
 import logOut from "../actions/LogoutAction";
 import Show from "../components/Show";
+import EqualizerIcon from '@material-ui/icons/Equalizer';
+import DonutLargeIcon from '@material-ui/icons/DonutLarge';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function Router() {
     const loggingOut = () => {
@@ -19,8 +22,23 @@ function Router() {
     const loggedInCheck = useSelector((state) => state.LogIn.login)
     return (
         <div>
+            <div className="header">
+                CourseTrack.it
+            </div>
             <nav>
-               { loggedInCheck ? <button onClick={()=> loggingOut()}>LOG OUT</button> : ""}
+                {loggedInCheck ?
+                    <div className="nav-container">
+                        <a href="/dashboard">
+                            <EqualizerIcon />
+                            Courses</a>
+                        <a href="/dashboard">
+                            <DonutLargeIcon />
+                            Track.it</a>
+                        <a href="/" onClick={() => loggingOut()}>
+                            <ExitToAppIcon />
+                            Log out</a>
+                    </div> : ""
+                }
             </nav>
             <BrowserRouter>
                 <Switch>
@@ -29,7 +47,7 @@ function Router() {
                     )} />
                     <Route exact path={"/dashboard"} component={Dashboard} />
                     <Route exact path={"/course"} render={() => (
-                        <Show name={"TEST"} id={1} />
+                        <Show />
                     )} />
                 </Switch>
             </BrowserRouter>

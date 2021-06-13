@@ -6,15 +6,14 @@ import logIn from "../actions/LoginAction";
 import Course from "./Course";
 import AddCourseAction from "../actions/AddCourseAction";
 
+export const COURSES = ["RubyOnRails", "Ruby", "JavaScript", "React"]
 const Dashboard = () => {
     let history = useHistory()
     const [courses, setCourses] = useState([])
     useEffect(() => {
         checkLoginStatus()
         axios.get("http://localhost:3001/courses").then(response => {
-                // console.log(response.data);
                 setCourses(response.data.map(data => data))
-                // console.log(courses)
             })
     },[])
     function checkLoginStatus() {
@@ -37,10 +36,13 @@ const Dashboard = () => {
       }
     return (
         <div>
-            <h1>Dashboard</h1>
+            <h1 className="dashboard">Dashboard</h1>
+            <div className="course-container">
+
             {courses.map(course => (
                 <Course key={course.id} handleClick={clickHandler} course={course} />
             ))}
+            </div>
         </div>
     )
 }

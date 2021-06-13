@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import store from "../store/Store";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import AddMeasure from "../actions/AddMeasurementAction";
 import RemoveMeasure from "../actions/RemoveMeasurementAction";
+import DeleteIcon from '@material-ui/icons/Delete';
 
 function Show() {
     let history = useHistory()
@@ -66,23 +67,31 @@ function Show() {
         setData(e.target.value)
     }
     return (
-        <div>
-            <Link to={"/dashboard"}>Back</Link>
-            <h1>{course.name}</h1>
+        <div className="show-container">
+            <h1 className="dashboard">{course.name}</h1>
             <form onSubmit={handleSubmit}>
-            <input type="number" value={data} onChange={handleChange} />
-            <button type="submit">Add</button>
-        </form>
-            { measurements.map(data => {
-                if (course.id === data.course_id) {
-                    return <div>
-                        <p key={data.created_at}>{data.created_at.substring(0, 10)}</p>
-                        <p key={data.amount}>{ data.amount } Min</p>
-                        <button type="button" onClick={() => deleteMeasurement(data.id)} key={data.id}>delete</button>
-                        </div>
-                } else {
-                    return ""
-                }
+                <input type="number" placeholder="Write how many minutes..." value={data} onChange={handleChange} />
+                <button className="add-button" type="submit">Add</button>
+            </form>
+            { measurements.reverse().map(data => {
+                let data2 = new Date(data.created_at.substring(0, 10))
+                let dateToday = new Date()
+                console.log(data2, dateToday, data2.toString().substring(0, 16) === dateToday.toString().substring(0, 16))
+                return <div className="measurement-component">
+                   {/* {data2.toString().substring(0, 16) === dateToday.toString().substring(0, 16) ? <div className="today-bar">Today</div> : "" } */}
+                    <div className="flex-row">
+
+                        <CircularProgress variant="determinate" value={data.amount} />
+                        <p key={data.created_at}>{data2.toString().substring(0, 16)}</p>
+                    </div>
+                    <div className="grid-columns">
+
+                        <p className="min-para" key={data.amount}>{data.amount} Min</p>
+                        <button type="button" onClick={() => deleteMeasurement(data.id)} key={data.id}>
+                            <DeleteIcon />
+                        </button>
+                    </div>
+                </div>
             }
                 
             )}

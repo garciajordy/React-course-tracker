@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function Course({ handleClick, course }) {
     return (
-        <div>
+        <div className="course-component">
             <Link onClick={()=>handleClick(course)} to={"/course"}>
-            <h1>{ course.name }</h1>
+            { course.name }
             </Link>
         </div>
     )
