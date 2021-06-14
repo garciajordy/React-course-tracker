@@ -17,8 +17,7 @@ function LoginPanel() {
         email: data.email,
         password: data.password,
       },
-    },
-    { withCredentials: false }).then((response) => {
+    }).then((response) => {
       if (response.data.status === 'created') {
         store.dispatch(logIn(response.data.user));
         history.push('/dashboard');

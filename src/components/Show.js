@@ -48,7 +48,7 @@ function Show() {
         amount: data,
         course_id: course.id,
       },
-    }, { withCredentials: false }).then((response) => {
+    }).then((response) => {
       if (response.data.status === 'created') {
         store.dispatch(AddMeasure(response.data.measurement));
         setMeasurements((prev) => [...prev, response.data.measurement]);

@@ -11,7 +11,7 @@ const Dashboard = () => {
   const history = useHistory();
   const [courses, setCourses] = useState([]);
   function checkLoginStatus() {
-    axios.get('https://floating-ocean-43337.herokuapp.com/logged_in', { withCredentials: false }).then((response) => {
+    axios.get('https://floating-ocean-43337.herokuapp.com/logged_in').then((response) => {
       if (response.data.logged_in) {
         store.dispatch(logIn(response.data.user));
       } else {
