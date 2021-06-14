@@ -1,4 +1,4 @@
 const logOut = {
-    type: "LOGOUT"
-}
+  type: 'LOGOUT',
+};
 export default logOut;

@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import LogIn from "./LoginReducer";
-import CourseReducer from "./CourseReducer";
-import MeasurementReducer from "./MeasurementReducer";
+import LogIn from './LoginReducer';
+import CourseReducer from './CourseReducer';
+import MeasurementReducer from './MeasurementReducer';
 
-let reducers = combineReducers({
-    LogIn,
-    CourseReducer,
-    MeasurementReducer
-    
-})
+const reducers = combineReducers({
+  LogIn,
+  CourseReducer,
+  MeasurementReducer,
+
+});
 export default reducers;

@@ -15,6 +15,7 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "jest-cli": "^26.6.3",
     "node-sass": "^6.0.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^17.0.2",
@@ -52,15 +53,19 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/eslint-parser": "^7.14.4",
-    "@babel/plugin-syntax-jsx": "^7.12.13",
-    "@babel/preset-react": "^7.13.13",
+    "@babel/core": "^7.14.5",
+    "@babel/eslint-parser": "^7.14.5",
+    "@babel/plugin-syntax-jsx": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.19.0"
   }
 }
