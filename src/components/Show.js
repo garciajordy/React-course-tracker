@@ -51,7 +51,7 @@ function Show() {
     }).then((response) => {
       if (response.data.status === 'created') {
         store.dispatch(AddMeasure(response.data.measurement));
-        setMeasurements((prev) => [...prev, response.data.measurement]);
+        setMeasurements((prev) => [response.data.measurement, ...prev]);
         setData('');
       }
     });
