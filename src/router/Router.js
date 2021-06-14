@@ -15,7 +15,7 @@ function Router() {
   const loggingOut = () => {
     axios.delete('https://floating-ocean-43337.herokuapp.com/logout').then(() => {
       store.dispatch(logOut);
-      window.location.href = 'http://localhost:3000';
+      window.location.href = 'https://course-tracker-official.herokuapp.com';
     }).catch((error) => error);
   };
 

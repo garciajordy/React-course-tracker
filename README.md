@@ -28,7 +28,7 @@ In this project I created a Course tracking app for studying, you can track how 
 
 ## Live Demo
 
-[Live Link](https://pokemon-react-official.netlify.app/)
+[Live Link](https://course-tracker-official.herokuapp.com/)
 
 ## Available Scripts
 
