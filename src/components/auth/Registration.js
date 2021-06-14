@@ -20,7 +20,7 @@ function Registration() {
         password_confirmation: data.password_confirmation,
       },
     },
-    { withCredentials: true }).then((response) => {
+    { withCredentials: false }).then((response) => {
       if (response.data.status === 'created') {
         store.dispatch(logIn(response.data.user));
         history.push('/dashboard');

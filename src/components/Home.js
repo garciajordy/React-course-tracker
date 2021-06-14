@@ -10,7 +10,7 @@ import logIn from '../actions/LoginAction';
 const Home = ({ loggedInStatus }) => {
   const history = useHistory();
   function checkLoginStatus() {
-    axios.get('https://floating-ocean-43337.herokuapp.com/logged_in', { withCredentials: true }).then((response) => {
+    axios.get('https://floating-ocean-43337.herokuapp.com/logged_in', { withCredentials: false }).then((response) => {
       if (response.data.logged_in) {
         store.dispatch(logIn(response.data.user));
         history.push('/dashboard');

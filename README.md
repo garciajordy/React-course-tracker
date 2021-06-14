@@ -1,6 +1,34 @@
-# Getting Started with Create React App
+# Course Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project I created a Course tracking app for studying, you can track how much time you spend in a course.
+
+
+## Built With
+
+- React
+- HTML/CSS
+- Javascript
+- React
+
+## How to run this project on your local machine
+
+### Prerequisites
+1. An internet browser
+2. npm
+3. react
+
+   
+### Steps to follow
+1. Clone the repository to your local machine using `git@github.com:garciajordy/React-course-tracker.git`
+2. On your local machine, navigate to the folder using `cd React-course-tracker` in your terminal.
+3. Run `npm install` for installing all the dependencies.
+4. Run `npm start` to run the app on your local webserver.
+5. Visit `http://localhost:3000/` to see the app from your browser.
+
+
+## Live Demo
+
+[Live Link](https://pokemon-react-official.netlify.app/)
 
 ## Available Scripts
 
@@ -29,42 +57,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Author
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+👤 **Jordy Garcia**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Github:[@garciajordy](https://github.com/garciajordy)
+- Email:[jordygarcia0119@gmail.com](https://mail.google.com/mail/?view=cm&source=mailto&to=jordygarcia0119@gmail.com)
+- LinkedIn:[Jordy Garcia](https://www.linkedin.com/in/jordy-garcia-675849206/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Show your support
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Give a ⭐️ if you like this project!
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+- This project was inspired by the [Microverse](https:www.microverse.org) program
+- Design idea by Gregoire Vella on Behance
