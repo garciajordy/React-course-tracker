@@ -72,19 +72,29 @@ function Show() {
         <input type="number" placeholder="Write how many minutes..." value={data} onChange={handleChange} />
         <button className="add-button" type="submit">Add</button>
       </form>
+      <div className="today">
+        <p>
+          Today
+        </p>
+      </div>
       { measurements.reverse().map((data) => {
         const data2 = new Date(data.created_at.substring(0, 10));
+        const hours = parseInt(data.amount / 60, 10);
         return (
-          <div key={data.id} className="measurement-component">
+          <div key={data.created_at} className="measurement-component">
             <div className="flex-row">
 
               <CircularProgress variant="determinate" value={data.amount} />
-              <p key={data.created_at}>{data2.toString().substring(0, 16)}</p>
+              <p>{data2.toString().substring(0, 16)}</p>
             </div>
             <div className="grid-columns">
 
-              <p className="min-para" key={data.amount}>
-                {data.amount}
+              <p className="min-para">
+                {hours}
+                {' '}
+                Hour
+                {' '}
+                {data.amount % 60}
                 {' '}
                 Min
               </p>

@@ -39,7 +39,12 @@ const Dashboard = () => {
       <div className="course-container">
 
         {courses.map((course) => (
-          <Course key={course.id} handleClick={clickHandler} course={course} />
+          <Course
+            key={course.id}
+            handleClick={clickHandler}
+            courseId={course.id}
+            courseName={course.name}
+          />
         ))}
       </div>
     </div>
