@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="dashboard"
+  >
+    <div
+      class="header"
+    >
+      CourseTrack.it
+    </div>
+    <h1>
+      Home
+    </h1>
+    <h1 />
+    <div>
+      <form>
+        <p>
+           
+        </p>
+        <input
+          name="email"
+          placeholder="Email"
+          required=""
+          type="email"
+          value=""
+        />
+        <input
+          name="password"
+          placeholder="Password"
+          required=""
+          type="password"
+          value=""
+        />
+        <input
+          name="password_confirmation"
+          placeholder="Password_confirmation"
+          required=""
+          type="password"
+          value=""
+        />
+        <button
+          type="submit"
+        >
+          Register
+        </button>
+      </form>
+    </div>
+    <div>
+      <form>
+        <p>
+           
+        </p>
+        <input
+          name="email"
+          placeholder="Email"
+          required=""
+          type="email"
+          value=""
+        />
+        <input
+          name="password"
+          placeholder="Password"
+          required=""
+          type="password"
+          value=""
+        />
+        <button
+          type="submit"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,179 @@
+$primary-color: #4fb9ec;
+$secondary-color: #658798;
+$tiatery-color: #97e493;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+.course-component {
+  text-align: center;
+  background-color: lighten($primary-color, 20);
+  padding: 2rem;
+  border-radius: 8px;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+nav {
+  background-color: darken($secondary-color, 20);
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  width: 100%;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: lighten($secondary-color, 40);
+      text-decoration: none;
+      width: 100%;
+      font-size: 12px;
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.6rem;
+  background-color: $primary-color;
+}
+
+.dashboard {
+  text-align: center;
+  margin-top: 3rem;
+  color: $secondary-color;
+}
+
+.course-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  margin: 0.5rem;
+}
+
+form {
+  input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    margin-top: 0.15rem;
+
+    &:active {
+      border: none;
+    }
+  }
+
+  button {
+    border: none;
+    background-color: $tiatery-color;
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+.measurement-component {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #fff;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.show-container {
+  padding-bottom: 5rem;
+}
+
+.min-para {
+  text-align: right;
+}
+
+.flex-row {
+  gap: 0.5rem;
+  display: flex;
+}
+
+.grid-columns {
+  display: flex;
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: red;
+  }
+}
+
+.today-bar {
+  width: 100%;
+  padding: 0.1rem;
+  background-color: lighten($secondary-color, 20);
+  color: #fff;
+  font-size: 8px;
+  position: absolute;
+  top: -10px;
+}
+
+.today {
+  display: flex;
+  justify-content: space-between;
+  background-color: lighten($secondary-color, 20);
+  font-size: 12px;
+  color: #fff;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+
+  p {
+    margin: 0;
+  }
+}

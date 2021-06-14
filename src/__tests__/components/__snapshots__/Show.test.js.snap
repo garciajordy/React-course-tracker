@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="show-container"
+  >
+    <div
+      class="header"
+    >
+      .it
+    </div>
+    <h1
+      class="dashboard"
+    />
+    <form>
+      <input
+        placeholder="Write how many minutes..."
+        type="number"
+        value=""
+      />
+      <button
+        class="add-button"
+        type="submit"
+      >
+        Add
+      </button>
+    </form>
+    <div
+      class="today"
+    >
+      <p>
+        Today
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
