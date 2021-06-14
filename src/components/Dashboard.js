@@ -11,7 +11,7 @@ const Dashboard = () => {
   const history = useHistory();
   const [courses, setCourses] = useState([]);
   function checkLoginStatus() {
-    axios.get('http://localhost:3001/logged_in', { withCredentials: true }).then((response) => {
+    axios.get('https://floating-ocean-43337.herokuapp.com/logged_in', { withCredentials: true }).then((response) => {
       if (response.data.logged_in) {
         store.dispatch(logIn(response.data.user));
       } else {
@@ -23,9 +23,9 @@ const Dashboard = () => {
   }
   useEffect(() => {
     checkLoginStatus();
-    axios.get('http://localhost:3001/courses').then((response) => {
+    axios.get('https://floating-ocean-43337.herokuapp.com/courses').then((response) => {
       setCourses(response.data.map((data) => data));
-    });
+    }).catch((err) => err);
   }, []);
   const clickHandler = (course) => {
     store.dispatch(AddCourseAction(course));

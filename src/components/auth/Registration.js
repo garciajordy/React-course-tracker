@@ -13,7 +13,7 @@ function Registration() {
     registrationErrors: '',
   });
   function handleSubmit(event) {
-    axios.post('http://localhost:3001/registrations', {
+    axios.post('https://floating-ocean-43337.herokuapp.com/registrations', {
       user: {
         email: data.email,
         password: data.password,

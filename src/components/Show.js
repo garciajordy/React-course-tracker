@@ -14,7 +14,7 @@ function Show() {
   const [measurements, setMeasurements] = useState([]);
   const course = store.getState().CourseReducer;
   function getMeasurements() {
-    axios.get(`http://localhost:3001/courses/${course.id}`, { withCredentials: true }).then((response) => {
+    axios.get(`https://floating-ocean-43337.herokuapp.com/courses/${course.id}`, { withCredentials: true }).then((response) => {
       setMeasurements([]);
       setMeasurements(response.data.measurements.map((p) => p));
       measurements.map((data) => {
@@ -35,7 +35,7 @@ function Show() {
   }, []);
 
   function deleteMeasurement(id) {
-    axios.delete(`http://localhost:3001/measurements/${id}`, { withCredentials: true })
+    axios.delete(`https://floating-ocean-43337.herokuapp.com/measurements/${id}`, { withCredentials: true })
       .then(() => {
         store.dispatch(RemoveMeasure(id));
         setMeasurements(measurements.filter((item) => parseInt(item.id, 10) !== parseInt(id, 10)));
@@ -43,7 +43,7 @@ function Show() {
       .catch((err) => err);
   }
   function handleSubmit(event) {
-    axios.post('http://localhost:3001/measurements', {
+    axios.post('https://floating-ocean-43337.herokuapp.com/measurements', {
       measurement: {
         amount: data,
         course_id: course.id,

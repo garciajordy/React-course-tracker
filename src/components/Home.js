@@ -10,7 +10,7 @@ import logIn from '../actions/LoginAction';
 const Home = ({ loggedInStatus }) => {
   const history = useHistory();
   function checkLoginStatus() {
-    axios.get('http://localhost:3001/logged_in', { withCredentials: true }).then((response) => {
+    axios.get('https://floating-ocean-43337.herokuapp.com/logged_in', { withCredentials: true }).then((response) => {
       if (response.data.logged_in) {
         store.dispatch(logIn(response.data.user));
         history.push('/dashboard');
@@ -34,6 +34,9 @@ const Home = ({ loggedInStatus }) => {
 };
 
 Home.propTypes = {
-  loggedInStatus: PropTypes.bool.isRequired,
+  loggedInStatus: PropTypes.bool,
+};
+Home.defaultProps = {
+  loggedInStatus: false,
 };
 export default Home;

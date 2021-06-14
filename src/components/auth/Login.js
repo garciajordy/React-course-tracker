@@ -12,7 +12,7 @@ function LoginPanel() {
     loginErrors: '',
   });
   function handleSubmit(event) {
-    axios.post('http://localhost:3001/sessions', {
+    axios.post('https://floating-ocean-43337.herokuapp.com/sessions', {
       user: {
         email: data.email,
         password: data.password,

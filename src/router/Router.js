@@ -13,7 +13,7 @@ import Show from '../components/Show';
 
 function Router() {
   const loggingOut = () => {
-    axios.delete('http://localhost:3001/logout', { withCredentials: true }).then(() => {
+    axios.delete('https://floating-ocean-43337.herokuapp.com/logout', { withCredentials: true }).then(() => {
       store.dispatch(logOut);
       window.location.href = 'http://localhost:3000';
     }).catch((error) => error);
